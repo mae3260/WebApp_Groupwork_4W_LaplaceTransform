@@ -178,6 +178,28 @@
   }
   .reflection-box textarea:focus { outline: none; border-color: var(--amber); }
 
+  .upload-block {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px;
+    margin: 0 0 18px 0;
+  }
+  .upload-block input[type="file"] {
+    font-family: 'Inter', sans-serif; font-size: 12.5px; color: var(--fg);
+  }
+  .upload-thumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+  .thumb-wrap { position: relative; width: 90px; height: 120px; }
+  .thumb-img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: 6px; border: 1px solid var(--line);
+    display: block;
+  }
+  .thumb-remove {
+    position: absolute; top: -7px; right: -7px; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--rose); color: var(--ink); border: none; cursor: pointer; font-size: 13px;
+    line-height: 1; display: flex; align-items: center; justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .upload-status { font-size: 11px; color: var(--cyan); margin: 8px 0 0 0; font-family: 'JetBrains Mono', monospace; }
+  .upload-err { font-size: 11px; color: var(--rose); margin: 8px 0 0 0; font-family: 'JetBrains Mono', monospace; line-height: 1.5; }
+
   .run-btn {
     font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600;
     padding: 10px 22px; border-radius: 6px; border: none;
@@ -320,10 +342,19 @@
             </div>
             <button class="run-btn" id="btn-p1-Xs">CHECK</button>
             <div class="match-banner" id="banner-p1-Xs"></div>
+
+            <p class="instructions" style="margin-top:16px;">Upload your calculations for part a):</p>
+            <div class="upload-block">
+              <input type="file" id="upload-input-p1a" accept="image/*" multiple />
+              <div class="upload-thumbs" id="upload-thumbs-p1a"></div>
+              <p class="upload-status" id="upload-status-p1a"></p>
+              <p class="upload-err" id="upload-err-p1a"></p>
+            </div>
           </div>
         </div>
 
         <h4 class="part-title">b) Find x(t)</h4>
+        <div class="eq-block" id="eq-p1-form" style="margin-top:0;"></div>
         <div class="panel-box">
           <div class="form-grid">
             <div class="field"><label>A</label><input type="number" id="input-p1-A" value="0" step="any" /></div>
@@ -336,6 +367,14 @@
         <button class="run-btn" id="btn-p1-xt">CHECK</button>
         <div class="match-banner" id="banner-p1-xt"></div>
         <div class="plot-host" id="plot-p1"><div class="placeholder">Enter A, B, C, D, E above and click Check.</div></div>
+
+        <p class="instructions" style="margin-top:16px;">Upload your calculations for part b):</p>
+        <div class="upload-block">
+          <input type="file" id="upload-input-p1b" accept="image/*" multiple />
+          <div class="upload-thumbs" id="upload-thumbs-p1b"></div>
+          <p class="upload-status" id="upload-status-p1b"></p>
+          <p class="upload-err" id="upload-err-p1b"></p>
+        </div>
 
         <h4 class="part-title">c) Discussion</h4>
         <p class="instructions">Discuss which solution components (constant, exponential, sinusoid, etc) are in the final solution and how these relate to the physical response.</p>
@@ -381,10 +420,19 @@
             </div>
             <button class="run-btn" id="btn-p2-Xs">CHECK</button>
             <div class="match-banner" id="banner-p2-Xs"></div>
+
+            <p class="instructions" style="margin-top:16px;">Upload your calculations for part a):</p>
+            <div class="upload-block">
+              <input type="file" id="upload-input-p2a" accept="image/*" multiple />
+              <div class="upload-thumbs" id="upload-thumbs-p2a"></div>
+              <p class="upload-status" id="upload-status-p2a"></p>
+              <p class="upload-err" id="upload-err-p2a"></p>
+            </div>
           </div>
         </div>
 
         <h4 class="part-title">b) Find x(t)</h4>
+        <div class="eq-block" id="eq-p2-form" style="margin-top:0;"></div>
         <div class="panel-box">
           <div class="form-grid">
             <div class="field"><label>A</label><input type="number" id="input-p2-A" value="0" step="any" /></div>
@@ -397,6 +445,14 @@
         <button class="run-btn" id="btn-p2-xt">CHECK</button>
         <div class="match-banner" id="banner-p2-xt"></div>
         <div class="plot-host" id="plot-p2"><div class="placeholder">Enter A, B, C, D, E above and click Check.</div></div>
+
+        <p class="instructions" style="margin-top:16px;">Upload your calculations for part b):</p>
+        <div class="upload-block">
+          <input type="file" id="upload-input-p2b" accept="image/*" multiple />
+          <div class="upload-thumbs" id="upload-thumbs-p2b"></div>
+          <p class="upload-status" id="upload-status-p2b"></p>
+          <p class="upload-err" id="upload-err-p2b"></p>
+        </div>
 
         <h4 class="part-title">c) Discussion</h4>
         <p class="instructions">Discuss which solution components (constant, exponential, sinusoid, etc) are in the final solution and how these relate to the physical response.</p>
@@ -443,10 +499,19 @@
             </div>
             <button class="run-btn" id="btn-p3-Xs">CHECK</button>
             <div class="match-banner" id="banner-p3-Xs"></div>
+
+            <p class="instructions" style="margin-top:16px;">Upload your calculations for part a):</p>
+            <div class="upload-block">
+              <input type="file" id="upload-input-p3a" accept="image/*" multiple />
+              <div class="upload-thumbs" id="upload-thumbs-p3a"></div>
+              <p class="upload-status" id="upload-status-p3a"></p>
+              <p class="upload-err" id="upload-err-p3a"></p>
+            </div>
           </div>
         </div>
 
         <h4 class="part-title">b) Find &theta;(t)</h4>
+        <div class="eq-block" id="eq-p3-form" style="margin-top:0;"></div>
         <div class="panel-box">
           <div class="form-grid">
             <div class="field"><label>A</label><input type="number" id="input-p3-A" value="0" step="any" /></div>
@@ -459,6 +524,14 @@
         <button class="run-btn" id="btn-p3-xt">CHECK</button>
         <div class="match-banner" id="banner-p3-xt"></div>
         <div class="plot-host" id="plot-p3"><div class="placeholder">Enter A, B, C, D, E above and click Check.</div></div>
+
+        <p class="instructions" style="margin-top:16px;">Upload your calculations for part b):</p>
+        <div class="upload-block">
+          <input type="file" id="upload-input-p3b" accept="image/*" multiple />
+          <div class="upload-thumbs" id="upload-thumbs-p3b"></div>
+          <p class="upload-status" id="upload-status-p3b"></p>
+          <p class="upload-err" id="upload-err-p3b"></p>
+        </div>
 
         <h4 class="part-title">c) Discussion</h4>
         <p class="instructions">Discuss which solution components (constant, exponential, sinusoid, etc) are in the final solution and how these relate to the physical response.</p>
@@ -504,10 +577,19 @@
             </div>
             <button class="run-btn" id="btn-p4-Xs">CHECK</button>
             <div class="match-banner" id="banner-p4-Xs"></div>
+
+            <p class="instructions" style="margin-top:16px;">Upload your calculations for part a):</p>
+            <div class="upload-block">
+              <input type="file" id="upload-input-p4a" accept="image/*" multiple />
+              <div class="upload-thumbs" id="upload-thumbs-p4a"></div>
+              <p class="upload-status" id="upload-status-p4a"></p>
+              <p class="upload-err" id="upload-err-p4a"></p>
+            </div>
           </div>
         </div>
 
         <h4 class="part-title">b) Find &theta;(t)</h4>
+        <div class="eq-block" id="eq-p4-form" style="margin-top:0;"></div>
         <div class="panel-box">
           <div class="form-grid">
             <div class="field"><label>A</label><input type="number" id="input-p4-A" value="0" step="any" /></div>
@@ -520,6 +602,14 @@
         <button class="run-btn" id="btn-p4-xt">CHECK</button>
         <div class="match-banner" id="banner-p4-xt"></div>
         <div class="plot-host" id="plot-p4"><div class="placeholder">Enter A, B, C, D, E above and click Check.</div></div>
+
+        <p class="instructions" style="margin-top:16px;">Upload your calculations for part b):</p>
+        <div class="upload-block">
+          <input type="file" id="upload-input-p4b" accept="image/*" multiple />
+          <div class="upload-thumbs" id="upload-thumbs-p4b"></div>
+          <p class="upload-status" id="upload-status-p4b"></p>
+          <p class="upload-err" id="upload-err-p4b"></p>
+        </div>
 
         <h4 class="part-title">c) Discussion</h4>
         <p class="instructions">Discuss which solution components (constant, exponential, sinusoid, etc) are in the final solution and how these relate to the physical response.</p>
@@ -597,6 +687,10 @@
     document.getElementById("eq-general-response"),
     { throwOnError: false, displayMode: true }
   );
+  katex.render("x(t) = A + B e^{Ct}\\sin(Dt) + E e^{Ct}\\cos(Dt)", document.getElementById("eq-p1-form"), { throwOnError: false, displayMode: true });
+  katex.render("x(t) = A + B e^{Ct}\\sin(Dt) + E e^{Ct}\\cos(Dt)", document.getElementById("eq-p2-form"), { throwOnError: false, displayMode: true });
+  katex.render("\\theta(t) = A + B e^{Ct}\\sin(Dt) + E e^{Ct}\\cos(Dt)", document.getElementById("eq-p3-form"), { throwOnError: false, displayMode: true });
+  katex.render("\\theta(t) = A + B e^{Ct}\\sin(Dt) + E e^{Ct}\\cos(Dt)", document.getElementById("eq-p4-form"), { throwOnError: false, displayMode: true });
 
   // ---------------------------------------------------------------
   // Navigation
@@ -785,6 +879,101 @@
   });
 
   // ---------------------------------------------------------------
+  // Multi-image "upload your calculations" widgets -- two per problem
+  // (part a and part b). Resizes to a fixed max dimension and
+  // re-compresses as JPEG so the exported PDF stays a predictable
+  // size regardless of upload size.
+  // ---------------------------------------------------------------
+  const MAX_IMAGE_DIM = 1200;
+  const IMAGE_QUALITY = 0.7;
+  const UPLOAD_KEYS = ["p1a", "p1b", "p2a", "p2b", "p3a", "p3b", "p4a", "p4b"];
+  const uploadedImages = {};
+  UPLOAD_KEYS.forEach((k) => { uploadedImages[k] = []; });
+
+  function resizeAndCompressImage(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error("Could not read file."));
+      reader.onload = () => {
+        const img = new Image();
+        img.onerror = () => reject(new Error("Could not load image."));
+        img.onload = () => {
+          let width = img.width, height = img.height;
+          if (width > height && width > MAX_IMAGE_DIM) {
+            height = Math.round((height * MAX_IMAGE_DIM) / width);
+            width = MAX_IMAGE_DIM;
+          } else if (height >= width && height > MAX_IMAGE_DIM) {
+            width = Math.round((width * MAX_IMAGE_DIM) / height);
+            height = MAX_IMAGE_DIM;
+          }
+          const canvas = document.createElement("canvas");
+          canvas.width = width; canvas.height = height;
+          const ctx = canvas.getContext("2d");
+          ctx.fillStyle = "#FFFFFF";
+          ctx.fillRect(0, 0, width, height);
+          ctx.drawImage(img, 0, 0, width, height);
+          resolve({ dataUrl: canvas.toDataURL("image/jpeg", IMAGE_QUALITY), width, height });
+        };
+        img.src = reader.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+  function renderThumbnails(key) {
+    const host = document.getElementById(`upload-thumbs-${key}`);
+    host.innerHTML = "";
+    uploadedImages[key].forEach((entry, i) => {
+      const wrap = document.createElement("div");
+      wrap.className = "thumb-wrap";
+      const img = document.createElement("img");
+      img.src = entry.dataUrl;
+      img.className = "thumb-img";
+      const removeBtn = document.createElement("button");
+      removeBtn.className = "thumb-remove";
+      removeBtn.textContent = "\u00d7";
+      removeBtn.title = "Remove";
+      removeBtn.addEventListener("click", () => {
+        uploadedImages[key].splice(i, 1);
+        renderThumbnails(key);
+      });
+      wrap.appendChild(img);
+      wrap.appendChild(removeBtn);
+      host.appendChild(wrap);
+    });
+    const statusEl = document.getElementById(`upload-status-${key}`);
+    if (statusEl) {
+      const n = uploadedImages[key].length;
+      statusEl.textContent = n > 0 ? `\u2713 ${n} image${n > 1 ? "s" : ""} uploaded` : "";
+    }
+  }
+  function wireImageUpload(key) {
+    const input = document.getElementById(`upload-input-${key}`);
+    const errEl = document.getElementById(`upload-err-${key}`);
+    input.addEventListener("change", async () => {
+      const files = Array.from(input.files || []);
+      const failed = [];
+      for (const file of files) {
+        try {
+          const entry = await resizeAndCompressImage(file);
+          uploadedImages[key].push(entry);
+        } catch (err) {
+          console.error("Image upload failed:", err);
+          failed.push(file.name);
+        }
+      }
+      if (failed.length > 0 && errEl) {
+        errEl.textContent = `Could not load: ${failed.join(", ")}. The file may be an unsupported format (e.g. HEIC) or corrupted \u2014 try re-saving as JPEG/PNG, or take a screenshot instead.`;
+      } else if (errEl) {
+        errEl.textContent = "";
+      }
+      renderThumbnails(key);
+      input.value = "";
+      scheduleSave();
+    });
+  }
+  UPLOAD_KEYS.forEach(wireImageUpload);
+
+  // ---------------------------------------------------------------
   // Appendix PDF(s) to append to the end of the export (Submission
   // tab). Kept in memory as File objects (not persisted by autosave).
   // ---------------------------------------------------------------
@@ -861,6 +1050,13 @@
     document.querySelectorAll('input[id^="input-"], textarea[id^="input-"]').forEach((el) => {
       if (el.value.trim() === "") blanks.push(fieldLabelFor(el.id));
     });
+    UPLOAD_KEYS.forEach((key) => {
+      if (!uploadedImages[key] || uploadedImages[key].length === 0) {
+        const part = key.slice(-1);
+        const prob = key.slice(0, -1);
+        blanks.push(`Problem ${prob.slice(1)} (uploaded calculations for part ${part})`);
+      }
+    });
     return blanks;
   }
 
@@ -913,6 +1109,22 @@
         doc.addImage(dataUrl, "PNG", margin, y, imgWidth, imgHeight);
         y += imgHeight + 16;
       }
+      function addUploadedImages(key) {
+        const entries = uploadedImages[key] || [];
+        if (entries.length === 0) return;
+        addText(`Uploaded work (${entries.length} image${entries.length > 1 ? "s" : ""}):`);
+        const maxW = maxWidth / 2;
+        const maxH = (pageHeight - margin * 2) / 2;
+        entries.forEach((entry) => {
+          const aspect = entry.height / entry.width;
+          let w = maxW, h = w * aspect;
+          if (h > maxH) { h = maxH; w = h / aspect; }
+          ensureSpace(h + 10);
+          const xPos = margin + (maxWidth - w) / 2;
+          doc.addImage(entry.dataUrl, "JPEG", xPos, y, w, h);
+          y += h + 16;
+        });
+      }
 
       doc.setFont("helvetica", "bold"); doc.setFontSize(16);
       doc.splitTextToSize("GroupWork 4W \u2014 Laplace Transform", maxWidth).forEach((line) => { doc.text(line, margin, y); y += 20; });
@@ -933,6 +1145,7 @@
       for (const prefix of ["p1", "p2", "p3", "p4"]) {
         addHeading(PROBLEM_TITLES[prefix]);
         addText(`X(s) = ${document.getElementById(`input-${prefix}-Xs`).value}`);
+        addUploadedImages(`${prefix}a`);
         const A = document.getElementById(`input-${prefix}-A`).value;
         const B = document.getElementById(`input-${prefix}-B`).value;
         const C = document.getElementById(`input-${prefix}-C`).value;
@@ -940,6 +1153,7 @@
         const E = document.getElementById(`input-${prefix}-E`).value;
         addText(`A=${A}, B=${B}, C=${C}, D=${D}, E=${E}`);
         if (runFlags[prefix]) await addPlotImage(`plot-${prefix}`, `${prefix} plot`); else addText("(Not yet checked.)");
+        addUploadedImages(`${prefix}b`);
         addText("Discussion:", { bold: true, size: 10.5 });
         addText(reflectionText(`input-${prefix}-reflection`));
       }
@@ -1008,7 +1222,7 @@
   }
   function saveProgress() {
     try {
-      const state = { activeTab: currentActiveTab(), fields: collectFieldValues() };
+      const state = { activeTab: currentActiveTab(), fields: collectFieldValues(), uploadedImages: uploadedImages };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch (err) {
       // storage unavailable -- fail silently
@@ -1034,6 +1248,14 @@
         const el = document.getElementById(id);
         if (!el) return;
         el.value = state.fields[id];
+      });
+    }
+    if (state.uploadedImages) {
+      Object.keys(state.uploadedImages).forEach((key) => {
+        if (uploadedImages[key] !== undefined) {
+          uploadedImages[key] = state.uploadedImages[key] || [];
+          renderThumbnails(key);
+        }
       });
     }
     ["p1", "p2", "p3", "p4"].forEach((prefix) => {
