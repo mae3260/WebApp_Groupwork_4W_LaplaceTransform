@@ -612,7 +612,7 @@
         </div>
 
         <h4 class="part-title">c) Discussion</h4>
-        <p class="instructions">Discuss which solution components (constant, exponential, sinusoid, etc) are in the final solution and how these relate to the physical response.</p>
+        <p class="instructions">Discuss what components (e.g. constant, exponent, sinusoid, etc.) show up in the solution you obtained in (b) and how these components relate to the physical response of the hanging rod system.</p>
         <div class="reflection-box">
           <textarea id="input-p4-reflection" placeholder="Type your answer here..."></textarea>
         </div>
@@ -773,6 +773,10 @@
 
       const raw = document.getElementById(`input-${prefix}-Xs`).value.trim();
       if (!raw) { errEl.textContent = "Enter an expression."; return; }
+      if (!/\bs\b/.test(raw)) {
+        errEl.textContent = "Enter an expression in terms of s \u2014 a plain number isn't a function of s.";
+        return;
+      }
 
       const samplePoints = [0.3, 0.7, 1.3, 2.1, 3.7, -0.4, -1.1];
       let sumSq = 0, maxAbs = 0, ok = true;
@@ -796,10 +800,10 @@
       const relErr = Math.sqrt(sumSq / samplePoints.length) / (maxAbs || 1);
       if (relErr < 0.01) {
         bannerEl.className = "match-banner match";
-        bannerEl.textContent = `\u2713 Matches the correct X(s) (relative error ${(relErr * 100).toFixed(2)}%).`;
+        bannerEl.textContent = "\u2713 Correct.";
       } else {
         bannerEl.className = "match-banner no-match";
-        bannerEl.textContent = `\u2717 Doesn't match yet (relative error ${(relErr * 100).toFixed(2)}%).`;
+        bannerEl.textContent = "\u2717 Not quite \u2014 try again.";
       }
     }
     document.getElementById(`btn-${prefix}-Xs`).addEventListener("click", run);
@@ -847,10 +851,10 @@
 
       if (relErr < 0.01) {
         bannerEl.className = "match-banner match";
-        bannerEl.textContent = `\u2713 Matches the correct solution (relative error ${(relErr * 100).toFixed(2)}%).`;
+        bannerEl.textContent = "\u2713 Correct.";
       } else {
         bannerEl.className = "match-banner no-match";
-        bannerEl.textContent = `\u2717 Doesn't match yet (relative error ${(relErr * 100).toFixed(2)}%).`;
+        bannerEl.textContent = "\u2717 Not quite \u2014 try again.";
       }
 
       Plotly.newPlot(
