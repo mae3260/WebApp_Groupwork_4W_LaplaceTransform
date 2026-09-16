@@ -146,6 +146,7 @@
   }
   .field input:focus { outline: none; border-color: var(--amber); }
   .field .err-msg { font-size: 11px; color: var(--rose); margin-top: 6px; min-height: 14px; }
+  .field-err { font-size: 11px; color: var(--rose); margin: 8px 0 0 0; min-height: 14px; font-family: 'JetBrains Mono', monospace; }
 
   .layout-with-sidebar { display: flex; gap: 20px; align-items: flex-start; }
   .layout-main { flex: 1; min-width: 0; }
@@ -330,6 +331,7 @@
             <div class="syn-row"><span>add</span><code>a+b</code></div>
             <div class="syn-row"><span>subtract</span><code>a-b</code></div>
             <div class="syn-row"><span>power</span><code>a^b</code></div>
+            <div class="syn-row"><span>square root</span><code>sqrt(a)</code></div>
             <div class="syn-row"><span>group</span><code>(a+b)*c</code></div>
           </div>
           <div class="layout-main">
@@ -355,18 +357,33 @@
 
         <h4 class="part-title">b) Find x(t)</h4>
         <div class="eq-block" id="eq-p1-form" style="margin-top:0;"></div>
-        <div class="panel-box">
-          <div class="form-grid">
-            <div class="field"><label>A</label><input type="number" id="input-p1-A" value="0" step="any" /></div>
-            <div class="field"><label>B</label><input type="number" id="input-p1-B" value="0" step="any" /></div>
-            <div class="field"><label>C</label><input type="number" id="input-p1-C" value="0" step="any" /></div>
-            <div class="field"><label>D</label><input type="number" id="input-p1-D" value="0" step="any" /></div>
-            <div class="field"><label>E</label><input type="number" id="input-p1-E" value="0" step="any" /></div>
+        <div class="layout-with-sidebar">
+          <div class="syntax-ref">
+            <h4>Syntax</h4>
+            <div class="syn-row"><span>multiply</span><code>a*b</code></div>
+            <div class="syn-row"><span>divide</span><code>a/b</code></div>
+            <div class="syn-row"><span>add</span><code>a+b</code></div>
+            <div class="syn-row"><span>subtract</span><code>a-b</code></div>
+            <div class="syn-row"><span>power</span><code>a^b</code></div>
+            <div class="syn-row"><span>square root</span><code>sqrt(a)</code></div>
+            <div class="syn-row"><span>group</span><code>(a+b)*c</code></div>
+          </div>
+          <div class="layout-main">
+            <div class="panel-box">
+              <div class="form-grid">
+                <div class="field"><label>A</label><input type="text" id="input-p1-A" value="0" spellcheck="false" /></div>
+                <div class="field"><label>B</label><input type="text" id="input-p1-B" value="0" spellcheck="false" /></div>
+                <div class="field"><label>C</label><input type="text" id="input-p1-C" value="0" spellcheck="false" /></div>
+                <div class="field"><label>D</label><input type="text" id="input-p1-D" value="0" spellcheck="false" /></div>
+                <div class="field"><label>E</label><input type="text" id="input-p1-E" value="0" spellcheck="false" /></div>
+              </div>
+              <p class="field-err" id="err-p1-coef"></p>
+            </div>
+            <button class="run-btn" id="btn-p1-xt">CHECK</button>
+            <div class="match-banner" id="banner-p1-xt"></div>
+            <div class="plot-host" id="plot-p1"></div>
           </div>
         </div>
-        <button class="run-btn" id="btn-p1-xt">CHECK</button>
-        <div class="match-banner" id="banner-p1-xt"></div>
-        <div class="plot-host" id="plot-p1"></div>
 
         <p class="instructions" style="margin-top:16px;">Upload your calculations for part b):</p>
         <div class="upload-block">
@@ -408,6 +425,7 @@
             <div class="syn-row"><span>add</span><code>a+b</code></div>
             <div class="syn-row"><span>subtract</span><code>a-b</code></div>
             <div class="syn-row"><span>power</span><code>a^b</code></div>
+            <div class="syn-row"><span>square root</span><code>sqrt(a)</code></div>
             <div class="syn-row"><span>group</span><code>(a+b)*c</code></div>
           </div>
           <div class="layout-main">
@@ -433,18 +451,33 @@
 
         <h4 class="part-title">b) Find x(t)</h4>
         <div class="eq-block" id="eq-p2-form" style="margin-top:0;"></div>
-        <div class="panel-box">
-          <div class="form-grid">
-            <div class="field"><label>A</label><input type="number" id="input-p2-A" value="0" step="any" /></div>
-            <div class="field"><label>B</label><input type="number" id="input-p2-B" value="0" step="any" /></div>
-            <div class="field"><label>C</label><input type="number" id="input-p2-C" value="0" step="any" /></div>
-            <div class="field"><label>D</label><input type="number" id="input-p2-D" value="0" step="any" /></div>
-            <div class="field"><label>E</label><input type="number" id="input-p2-E" value="0" step="any" /></div>
+        <div class="layout-with-sidebar">
+          <div class="syntax-ref">
+            <h4>Syntax</h4>
+            <div class="syn-row"><span>multiply</span><code>a*b</code></div>
+            <div class="syn-row"><span>divide</span><code>a/b</code></div>
+            <div class="syn-row"><span>add</span><code>a+b</code></div>
+            <div class="syn-row"><span>subtract</span><code>a-b</code></div>
+            <div class="syn-row"><span>power</span><code>a^b</code></div>
+            <div class="syn-row"><span>square root</span><code>sqrt(a)</code></div>
+            <div class="syn-row"><span>group</span><code>(a+b)*c</code></div>
+          </div>
+          <div class="layout-main">
+            <div class="panel-box">
+              <div class="form-grid">
+                <div class="field"><label>A</label><input type="text" id="input-p2-A" value="0" spellcheck="false" /></div>
+                <div class="field"><label>B</label><input type="text" id="input-p2-B" value="0" spellcheck="false" /></div>
+                <div class="field"><label>C</label><input type="text" id="input-p2-C" value="0" spellcheck="false" /></div>
+                <div class="field"><label>D</label><input type="text" id="input-p2-D" value="0" spellcheck="false" /></div>
+                <div class="field"><label>E</label><input type="text" id="input-p2-E" value="0" spellcheck="false" /></div>
+              </div>
+              <p class="field-err" id="err-p2-coef"></p>
+            </div>
+            <button class="run-btn" id="btn-p2-xt">CHECK</button>
+            <div class="match-banner" id="banner-p2-xt"></div>
+            <div class="plot-host" id="plot-p2"></div>
           </div>
         </div>
-        <button class="run-btn" id="btn-p2-xt">CHECK</button>
-        <div class="match-banner" id="banner-p2-xt"></div>
-        <div class="plot-host" id="plot-p2"></div>
 
         <p class="instructions" style="margin-top:16px;">Upload your calculations for part b):</p>
         <div class="upload-block">
@@ -487,6 +520,7 @@
             <div class="syn-row"><span>add</span><code>a+b</code></div>
             <div class="syn-row"><span>subtract</span><code>a-b</code></div>
             <div class="syn-row"><span>power</span><code>a^b</code></div>
+            <div class="syn-row"><span>square root</span><code>sqrt(a)</code></div>
             <div class="syn-row"><span>group</span><code>(a+b)*c</code></div>
           </div>
           <div class="layout-main">
@@ -512,18 +546,33 @@
 
         <h4 class="part-title">b) Find &theta;(t)</h4>
         <div class="eq-block" id="eq-p3-form" style="margin-top:0;"></div>
-        <div class="panel-box">
-          <div class="form-grid">
-            <div class="field"><label>A</label><input type="number" id="input-p3-A" value="0" step="any" /></div>
-            <div class="field"><label>B</label><input type="number" id="input-p3-B" value="0" step="any" /></div>
-            <div class="field"><label>C</label><input type="number" id="input-p3-C" value="0" step="any" /></div>
-            <div class="field"><label>D</label><input type="number" id="input-p3-D" value="0" step="any" /></div>
-            <div class="field"><label>E</label><input type="number" id="input-p3-E" value="0" step="any" /></div>
+        <div class="layout-with-sidebar">
+          <div class="syntax-ref">
+            <h4>Syntax</h4>
+            <div class="syn-row"><span>multiply</span><code>a*b</code></div>
+            <div class="syn-row"><span>divide</span><code>a/b</code></div>
+            <div class="syn-row"><span>add</span><code>a+b</code></div>
+            <div class="syn-row"><span>subtract</span><code>a-b</code></div>
+            <div class="syn-row"><span>power</span><code>a^b</code></div>
+            <div class="syn-row"><span>square root</span><code>sqrt(a)</code></div>
+            <div class="syn-row"><span>group</span><code>(a+b)*c</code></div>
+          </div>
+          <div class="layout-main">
+            <div class="panel-box">
+              <div class="form-grid">
+                <div class="field"><label>A</label><input type="text" id="input-p3-A" value="0" spellcheck="false" /></div>
+                <div class="field"><label>B</label><input type="text" id="input-p3-B" value="0" spellcheck="false" /></div>
+                <div class="field"><label>C</label><input type="text" id="input-p3-C" value="0" spellcheck="false" /></div>
+                <div class="field"><label>D</label><input type="text" id="input-p3-D" value="0" spellcheck="false" /></div>
+                <div class="field"><label>E</label><input type="text" id="input-p3-E" value="0" spellcheck="false" /></div>
+              </div>
+              <p class="field-err" id="err-p3-coef"></p>
+            </div>
+            <button class="run-btn" id="btn-p3-xt">CHECK</button>
+            <div class="match-banner" id="banner-p3-xt"></div>
+            <div class="plot-host" id="plot-p3"></div>
           </div>
         </div>
-        <button class="run-btn" id="btn-p3-xt">CHECK</button>
-        <div class="match-banner" id="banner-p3-xt"></div>
-        <div class="plot-host" id="plot-p3"></div>
 
         <p class="instructions" style="margin-top:16px;">Upload your calculations for part b):</p>
         <div class="upload-block">
@@ -565,6 +614,7 @@
             <div class="syn-row"><span>add</span><code>a+b</code></div>
             <div class="syn-row"><span>subtract</span><code>a-b</code></div>
             <div class="syn-row"><span>power</span><code>a^b</code></div>
+            <div class="syn-row"><span>square root</span><code>sqrt(a)</code></div>
             <div class="syn-row"><span>group</span><code>(a+b)*c</code></div>
           </div>
           <div class="layout-main">
@@ -590,18 +640,33 @@
 
         <h4 class="part-title">b) Find &theta;(t)</h4>
         <div class="eq-block" id="eq-p4-form" style="margin-top:0;"></div>
-        <div class="panel-box">
-          <div class="form-grid">
-            <div class="field"><label>A</label><input type="number" id="input-p4-A" value="0" step="any" /></div>
-            <div class="field"><label>B</label><input type="number" id="input-p4-B" value="0" step="any" /></div>
-            <div class="field"><label>C</label><input type="number" id="input-p4-C" value="0" step="any" /></div>
-            <div class="field"><label>D</label><input type="number" id="input-p4-D" value="0" step="any" /></div>
-            <div class="field"><label>E</label><input type="number" id="input-p4-E" value="0" step="any" /></div>
+        <div class="layout-with-sidebar">
+          <div class="syntax-ref">
+            <h4>Syntax</h4>
+            <div class="syn-row"><span>multiply</span><code>a*b</code></div>
+            <div class="syn-row"><span>divide</span><code>a/b</code></div>
+            <div class="syn-row"><span>add</span><code>a+b</code></div>
+            <div class="syn-row"><span>subtract</span><code>a-b</code></div>
+            <div class="syn-row"><span>power</span><code>a^b</code></div>
+            <div class="syn-row"><span>square root</span><code>sqrt(a)</code></div>
+            <div class="syn-row"><span>group</span><code>(a+b)*c</code></div>
+          </div>
+          <div class="layout-main">
+            <div class="panel-box">
+              <div class="form-grid">
+                <div class="field"><label>A</label><input type="text" id="input-p4-A" value="0" spellcheck="false" /></div>
+                <div class="field"><label>B</label><input type="text" id="input-p4-B" value="0" spellcheck="false" /></div>
+                <div class="field"><label>C</label><input type="text" id="input-p4-C" value="0" spellcheck="false" /></div>
+                <div class="field"><label>D</label><input type="text" id="input-p4-D" value="0" spellcheck="false" /></div>
+                <div class="field"><label>E</label><input type="text" id="input-p4-E" value="0" spellcheck="false" /></div>
+              </div>
+              <p class="field-err" id="err-p4-coef"></p>
+            </div>
+            <button class="run-btn" id="btn-p4-xt">CHECK</button>
+            <div class="match-banner" id="banner-p4-xt"></div>
+            <div class="plot-host" id="plot-p4"></div>
           </div>
         </div>
-        <button class="run-btn" id="btn-p4-xt">CHECK</button>
-        <div class="match-banner" id="banner-p4-xt"></div>
-        <div class="plot-host" id="plot-p4"></div>
 
         <p class="instructions" style="margin-top:16px;">Upload your calculations for part b):</p>
         <div class="upload-block">
@@ -818,20 +883,32 @@
     const { a, b, c, d, U, x0, xdot0 } = params;
     const trueVals = trueABCDE(a, b, c, d, U, x0, xdot0);
 
+    function evalCoef(id) {
+      const raw = document.getElementById(id).value.trim();
+      if (!raw) return NaN;
+      try {
+        const v = math.evaluate(raw);
+        return typeof v === "number" && isFinite(v) ? v : NaN;
+      } catch (err) {
+        return NaN;
+      }
+    }
+
     function run() {
-      const A = Number(document.getElementById(`input-${prefix}-A`).value);
-      const B = Number(document.getElementById(`input-${prefix}-B`).value);
-      const C = Number(document.getElementById(`input-${prefix}-C`).value);
-      const D = Number(document.getElementById(`input-${prefix}-D`).value);
-      const E = Number(document.getElementById(`input-${prefix}-E`).value);
+      const errEl = document.getElementById(`err-${prefix}-coef`);
+      errEl.textContent = "";
+      const A = evalCoef(`input-${prefix}-A`);
+      const B = evalCoef(`input-${prefix}-B`);
+      const C = evalCoef(`input-${prefix}-C`);
+      const D = evalCoef(`input-${prefix}-D`);
+      const E = evalCoef(`input-${prefix}-E`);
 
       const bannerEl = document.getElementById(`banner-${prefix}-xt`);
       bannerEl.className = "match-banner";
       bannerEl.textContent = "";
 
       if (![A, B, C, D, E].every(isFinite)) {
-        bannerEl.className = "match-banner no-match";
-        bannerEl.textContent = "A, B, C, D, and E must all be numbers.";
+        errEl.textContent = "A, B, C, D, and E must all evaluate to numbers (e.g. sqrt(99) or 99^(1/2)).";
         return;
       }
 
